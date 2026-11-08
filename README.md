@@ -1,5 +1,7 @@
 # Video Background Play Fix  ![logo](/icon.svg)
 
+[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://app.codspeed.io/CarAuto34/video-bg-play?utm_source=badge)
+
 Firefox for Android can continue playing video even if you switch to another tab or app.
 However, sites can detect these user actions with the [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) and the [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API).
 This add-on is designed to block events and properties exposed by the APIs.
@@ -33,3 +35,12 @@ As a demonstration, the content script currently injects itself to the following
 
 * youtube.com and youtube-nocookie.com
 * vimeo.com
+
+## Benchmarks
+
+Performance of the content script is tracked with [CodSpeed](https://codspeed.io). The benchmarks in `bench/` run the script against a minimal stubbed browser environment using Vitest:
+
+```sh
+npm install
+npm run bench
+```
